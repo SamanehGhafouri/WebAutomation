@@ -11,3 +11,8 @@ from selenium.webdriver.chrome.options import Options
 # with GUI
 browser = Chrome()
 browser.get('https://duckduckgo.com')
+
+# query the input by passing 'real python' in input to search
+search_form = browser.find_element_by_id('search_form_input_homepage')
+search_form.send_keys('real python')
+search_form.submit()
