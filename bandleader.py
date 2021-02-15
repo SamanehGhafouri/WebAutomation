@@ -16,3 +16,8 @@ browser.get('https://duckduckgo.com')
 search_form = browser.find_element_by_id('search_form_input_homepage')
 search_form.send_keys('real python')
 search_form.submit()
+
+# with this we can get the first item description in text in terminal
+results = browser.find_elements_by_class_name('result')
+print(results[0].text)
+
